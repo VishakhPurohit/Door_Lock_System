@@ -1,0 +1,36 @@
+|lock
+reset => reset.IN1
+passin[0] => WideNor0.IN0
+passin[1] => WideNor0.IN1
+passin[2] => WideNor0.IN2
+passin[3] => WideNor0.IN3
+passin[4] => WideNor0.IN4
+passin[5] => WideNor0.IN5
+passin[6] => WideNor0.IN6
+passin[7] => WideNor0.IN7
+enter => enter.IN1
+access <= modn_ctr:counter.port4
+count[0] <= modn_ctr:counter.port3
+count[1] <= modn_ctr:counter.port3
+alarm <= modn_ctr:counter.port5
+
+
+|lock|modn_ctr:counter
+clk => access~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => alarm~reg0.CLK
+E => always0.IN1
+E => cnt.OUTPUTSELECT
+E => cnt.OUTPUTSELECT
+E => access.DATAA
+rstn => cnt[0]~reg0.ACLR
+rstn => cnt[1]~reg0.ACLR
+rstn => alarm~reg0.ACLR
+rstn => access~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+access <= access~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alarm <= alarm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

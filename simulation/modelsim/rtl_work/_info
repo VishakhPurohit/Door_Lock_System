@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\hp\OneDrive\Desktop\Verilog HDL\lock\simulation\modelsim
+vlock
+!i10b 1
+!s100 RhnE9a;?cLT[2[XA?U=0L0
+IeTzj<WknADcOEU?GOFVfe0
+V1zHgA=kf3haf5JMz=Kh?80
+Z1 dC:\Users\hp\OneDrive\Desktop\Verilog HDL\lock\simulation\modelsim
+Z2 w1725044504
+Z3 8C:/Users/hp/OneDrive/Desktop/Verilog HDL/lock/lock.v
+Z4 FC:/Users/hp/OneDrive/Desktop/Verilog HDL/lock/lock.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1725044539.735000
+Z7 !s107 C:/Users/hp/OneDrive/Desktop/Verilog HDL/lock/lock.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/hp/OneDrive/Desktop/Verilog HDL/lock|C:/Users/hp/OneDrive/Desktop/Verilog HDL/lock/lock.v|
+!s101 -O0
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work {+incdir+C:/Users/hp/OneDrive/Desktop/Verilog HDL/lock} -O0
+vmodn_ctr
+!i10b 1
+!s100 N?E@;AhFE@[iBGoz0cPN10
+I?7EA8MPig]De47kadDFD;1
+V=IMDCL>=WIYJ]XY]HRVEI2
+R1
+R2
+R3
+R4
+L0 15
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10

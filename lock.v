@@ -1,0 +1,51 @@
+module lock (reset,passin,enter,access,count,alarm);
+	input reset,enter;
+	input [7:0]passin;
+
+	output access,alarm;
+	output[1:0]count;
+	wire check;
+	reg [7:0]setpass;
+	initial begin
+	setpass=8'b01101010;
+	end
+	assign check=!(setpass^passin);
+	modn_ctr counter(enter,!check,reset,count,access,alarm);
+endmodule
+module modn_ctr(clk,E,rstn,cnt,access,alarm);
+	parameter n=4;
+	parameter width=2;
+	input clk,rstn,E;
+	output reg access,alarm;
+	output reg[width-1:0]cnt;
+	always @(posedge clk,posedge rstn)
+		if (rstn) 
+			begin
+				alarm<=0;
+				cnt<=0;
+			end
+		else if (E & cnt==n-2)
+			begin
+				access<=0;
+				alarm<=1;
+				cnt<=cnt+1;
+			end
+		else if (cnt==n-1)
+			begin
+				access<=0;
+				alarm<=1;
+			end
+		else if (E)
+			begin
+				cnt<=cnt+1;
+				access<=0;
+				alarm<=0;
+			end
+		else 
+			begin
+				cnt<=0;
+				access<=1;
+				alarm<=0;
+			end
+endmodule			
+			
